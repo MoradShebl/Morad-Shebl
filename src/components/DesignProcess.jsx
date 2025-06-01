@@ -30,7 +30,6 @@ const DesignProcess = () => {
     },
   ];
 
-  const stepRefs = useRef([]);
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
 

@@ -7,8 +7,6 @@ export const Home = memo(() => {
   const starRefs = useRef([]);
   const contentRef = useRef(null);
 
-  // Only run animations if screen is desktop size
-  const isDesktop = window.innerWidth >= 1024;
   const gridRef = useRef(null);
   const sectionRef = useRef(null);
 
