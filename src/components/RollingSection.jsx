@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "./RollingSection.css";
 import techsData from "../data/techs.json";
@@ -7,7 +7,6 @@ const { techs } = techsData;
 
 export default function RollingSection() {
   const trackRef = useRef(null);
-  const [isPaused, setIsPaused] = useState(false);
   const rollingTechs = [...techs, ...techs];
 
   useEffect(() => {
@@ -16,39 +15,22 @@ export default function RollingSection() {
       duration: 30,
       ease: "linear",
       repeat: -1,
-      paused: isPaused,
     });
 
-    animation.play();
     return () => animation.kill();
-  }, [isPaused]);
+  }, []);
 
   return (
-    <div
-      className="rolling-section"
-      role="marquee"
-      aria-label="Technologies I work with"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocus={() => setIsPaused(true)}
-      onBlur={() => setIsPaused(false)}
-    >
-      <div
-        className="rolling-track"
-        ref={trackRef}
-        aria-hidden="true"
-      >
+    <div className="rolling-section">
+      <div className="rolling-track" ref={trackRef}>
         {rollingTechs.map((tech, idx) => (
-          <div key={`${tech}-${idx}`} className="tech-group">
-            <div
-              className="rolling-item"
-              tabIndex={0}
-            >
-              <span>{tech}</span>
+          <>
+            <div className="rolling-item" key={idx}>
+              <span key={tech}>{tech}</span>
             </div>
             <span
               className="asterisk"
-              aria-hidden="true"
+              key={`asterisk-${idx}`}
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -56,7 +38,7 @@ export default function RollingSection() {
             >
               ✱
             </span>
-          </div>
+          </>
         ))}
       </div>
     </div>
