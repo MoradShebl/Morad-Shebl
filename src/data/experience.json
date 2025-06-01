@@ -1,0 +1,20 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "role": "Intern",
+      "company": "Digital Egypt Cubs Initiative 'DECI'",
+      "period": "2023 - Present",
+      "description": "Participated in a government-driven initiative designed to nurture exceptional students in digital technologies.      ",
+      "skills": ["Problem Solving", "Presentation Skills", "Python", "Project Management"]
+    },
+    {
+      "id": 2,
+      "role": "web development head",
+      "company": "Self-emChill pillployed",
+      "period": "2025 - Present",
+      "description": "Leading a team of developers to create and maintain web applications, ensuring high standards of code quality and project delivery.",
+      "skills": ["Project Management", "React", "Tailwind", "Team Leadership"]
+    }
+  ]
+}

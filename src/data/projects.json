@@ -1,0 +1,148 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Portofolio Website",
+      "description": "My new modern portofolio website Reflects My Journey",
+      "tech": ["React", "Gsap", "CSS"],
+      "image": "src/assets/NewPortofolio.png",
+      "details": {
+        "fullDescription": "My new portofolio Website that made with React and Gsap, showcasing my skills and projects in a modern design.",
+        "features": [
+          "Modern UI",
+          "Nice animations with Gsap",
+          "Responsive design"
+        ],
+        "screenshots": [
+          "src/assets/NewPortofolioWebsiteScreen1.png",
+          "src/assets/NewPortofolioWebsiteScreen2.png",
+          "src/assets/NewPortofolioWebsiteScreen3.png"
+        ],
+        "liveDemo": "https://demo-link.com",
+        "github": "https://github.com/link"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Remembrall",
+      "description": "App organize your items times to-dos and habits",
+      "tech": ["React", "CSS"],
+      "image": "src/assets/Remembrall.png",
+      "details": {
+        "fullDescription": "A magical-themed reminder app designed to help users stay on top of their tasks and habits. Inspired by the wizarding world, it offers a sleek and intuitive interface that makes organization feel effortless and engaging.",
+        "features": [
+          "Daily Reminders",
+          "Themed UI",
+          "Progress Tracking"
+        ],
+        "screenshots": [
+          "src/assets/RemembrallScreen1.png",
+          "src/assets/RemembrallScreen2.png",
+          "src/assets/RemembrallScreen3.png"
+        ],
+        "liveDemo": "https://remembrall-tawny.vercel.app/",
+        "github": "https://github.com/MoradShebl/Remembrall"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Car Fare Calculator",
+      "description": "app that calculating the fare of a car ride",
+      "tech": ["React", "CSS"],
+      "image": "src/assets/CarFare.png",
+      "details": {
+        "fullDescription": "a simple app that automates fare calculation and organizes the process, making daily commuting easier and clearer for everyone involved.",
+        "features": [
+          "Automatic Fare Calculation",
+          "Passenger Tracking",
+          "Clear Payment Summary"
+        ],
+        "liveDemo": "https://lam-elogra.vercel.app/",
+        "github": "https://github.com/MoradShebl/lam-elogra"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Expenses Tracker",
+      "description": "Simple, clean, and functional tracks incomes & expenses",
+      "tech": ["React", "CSS"],
+      "image": "src/assets/ExpensesTracker.jpg",
+      "details": {
+        "fullDescription": "It’s simple, clean, and functional tracks incomes & expenses in real-time. It provides a user-friendly interface for managing finances, allowing users to easily add, edit, and delete transactions.",
+        "features": [
+          "User friendly",
+          "easy to use",
+          "Responsive design"
+        ],
+        "liveDemo": "https://expenses-tracker-delta-lake.vercel.app/",
+        "github": "https://github.com/MoradShebl/expenses-tracker"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Shebl Mohamed Website",
+      "description": "My Second Website That I made for my Dad",
+      "tech": ["HTML", "CSS", "JS"],
+      "image": "src/assets/SheblMohamed.png",
+      "details": {
+        "fullDescription": "A clean and modern website showcasing Shebl Mohamed’s professional background, experience, and values through a smooth and user-friendly design.",
+        "features": [
+          "Responsive Design",
+          "Smooth Navigation",
+          "Contact Section"
+        ],
+        "liveDemo": "https://moradshebl.github.io/Shebl-Mohamed/",
+        "github": "https://github.com/MoradShebl/Shebl-Mohamed"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Portofolio Website",
+      "description": "My first portfolio Website That Reflects My Journey",
+      "tech": ["HTML", "CSS", "JS"],
+      "image": "src/assets/PortofolioWebste.png",
+      "details": {
+        "fullDescription": "A showcase of my projects This portfolio website reflects my journey as a developer, highlighting my skills and experiences in a visually appealing manner.",
+        "features": [
+          "Smooth Animations",
+          "Project Showcase",
+          "Modern, Clean Design"
+        ],
+        "liveDemo": "https://moradshebl.github.io/Shebl-Mohamed/",
+        "github": "https://github.com/MoradShebl/portofolio-website"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Face Blur",
+      "description": "A Program that blurs faces from Images, Videos, and WebCams.",
+      "tech": ["Python", "OpenCV"],
+      "image": "src/assets/FaceBlur.png",
+      "details": {
+        "fullDescription": "a computer vision application that automatically blurs faces from images, videos, and live webcams",
+        "features": [
+          "Real time",
+          "Multi-Source Support",
+          "Fast & Efficient Processing"
+        ],
+        "github": "https://github.com/link"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Talk2View",
+      "description": "A talk-to-sign-language app.",
+      "tech": ["Python", "Kivy", "OpenCV"],
+      "image": "src/assets/Talk2View.png",
+      "details": {
+        "fullDescription": "an innovative app that converts spoken language into sign language, making communication more accessible for individuals with disabilities.",
+        "features": [
+          "Easy UI",
+          "Available for phones",
+          "Real time"
+        ],
+        "github": "https://github.com/MoradShebl/Shebl-Mohamed"
+      }
+    }
+  ]
+}

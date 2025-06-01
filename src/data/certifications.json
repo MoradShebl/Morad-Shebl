@@ -1,0 +1,133 @@
+{
+  "certifications": [
+    {
+      "id": 1,
+      "title": "Preparing a Great Virtual Presentation Course",
+      "issuer": "Codecademy",
+      "date": "Feb 2025",
+      "image": "src/assets/Preparing a Great Virtual Presentation Course.png",
+      "link": "https://www.codecademy.com/profiles/morad_shebl/certificates/79347cecc22e46e5bb4a675eee096ac4",
+      "skills": [
+        "Presentation Skills",
+        "Virtual Presentation Delivery",
+        "Audience Engagement Techniques",
+        "Online Communication Skills",
+        "Slide Design for Virtual Platforms",
+        "Time Management in Presentations"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Complete Level(1) at DECI",
+      "issuer": "Digital Egypt Cubs Initiative 'DECI'",
+      "date": "Oct 2024",
+      "image": "src/assets/Morad Shebl Mohamed Eldeeb.png",
+      "link": "https://drive.google.com/file/d/1wrO-H1CVKu7S0BPyF-1pc4qKtN1Dy2j8/view",
+      "skills": [
+        "Programming",
+        "Artificial Intelligence (AI)",
+        "Teamwork",
+        "Team Leadership",
+        "Creative Problem Solving",
+        "Project Management"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Introduction to Numpy",
+      "issuer": "Simplilearn",
+      "date": "Oct 2024",
+      "image": "src/assets/numpy.png",
+      "link": "https://simpli-web.app.link/e/XSL0mG8wNNb",
+      "skills": ["Numby", "Data Analysis"]
+    },
+    {
+      "id": 4,
+      "title": "Python Programming Basics",
+      "issuer": "MaharaTech - ITIMooca",
+      "date": "Oct 2024",
+      "image": "src/assets/Course_Certificate_En.png",
+      "link": "https://maharatech.gov.eg/mod/customcert/view.php?id=1737&downloadown=1",
+      "skills": [
+        "Artificial Intelligence (AI)",
+        "Problem Solving",
+        "Python (Programming Language)"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Attending the DECI-IBM Bootcamp",
+      "issuer": "Digital Egypt Cubs Initiative 'DECI'",
+      "date": "Sep 2024",
+      "image": "src/assets/Attending the DECI-IBM Bootcamp.jpg",
+      "skills": [
+        "Artificial Intelligence (AI)",
+        "Teamwork",
+        "Attention to Detail",
+        "Presentation Skills",
+        "Project Work"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Explore Emerging Tech",
+      "issuer": "IBM",
+      "date": "Aug 2024",
+      "link": "https://www.credly.com/badges/1e84883a-8a9e-436c-a5a1-0fad8fb581a4/linked_in_profile",
+      "skills": [
+        "Artificial Intelligence (AI)",
+        "Blockchain",
+        "Information Technology",
+        "Cybersecurity",
+        "Cloud Computing"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Summer camp of Digital Egypt Cubs Initiative",
+      "issuer": "Digital Egypt Cubs Initiative 'DECI'",
+      "date": "Aug 2024",
+      "image": "src/assets/Summer camp of DECI.png",
+      "skills": [
+        "Team Leadership",
+        "Team Management",
+        "Presentation Skills",
+        "Project Work"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Learn HTML & CSS",
+      "issuer": "MaharaTech - ITIMooca",
+      "date": "Jul 2024",
+      "image": "src/assets/Course_Certificate_En-1.png",
+      "link": "https://maharatech.gov.eg/mod/customcert/view.php?id=1404&downloadown=1",
+      "skills": [
+        "Web Design",
+        "Front-End Development",
+        "HTML5",
+        "Web Development",
+        "Responsive Web Design",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Maharat min Google Fundamentals of Digital Marketing",
+      "issuer": "Google",
+      "date": "Jul 2024",
+      "image": "src/assets/Certificate.png",
+      "skills": ["Digital Marketing"]
+    },
+    {
+      "id": 10,
+      "title": "أساسيات البرمجة بلغة جافا سكريبت و بايثون",
+      "issuer": "Udemy",
+      "date": "Jul 2024",
+      "image": "src/assets/أساسيات البرمجة بلغة جافا سكريبت و بايثون.jpg",
+      "link": "https://www.udemy.com/certificate/UC-ee2ac0e7-ec45-41a1-a8ca-e64949945d69/",
+      "skills": ["Programming", "JavaScript", "Python (Programming Language)"]
+    }
+  ]
+}

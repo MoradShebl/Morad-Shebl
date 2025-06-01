@@ -1,0 +1,100 @@
+:root {
+    --primary: #101111;
+    --secondary: #1c1c1c;
+    --third: #292929;
+    --button-font-color: #0a0a0a;
+    --adverse: #f8f8f8;
+    --font-color: #fff;
+    --font-color-hover: #e5e5e5;
+    --light1: #ffd49c;
+    --light2: #7a87fb;
+    --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--font-color);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background: var(--primary);
+}
+
+section {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s var(--cubic-bezier);
+}
+
+a:hover {
+    color: var(--font-color-hover);
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--light2), var(--light1));
+    color: var(--button-font-color);
+    background-size: 150% 150%;
+    background-position: left;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-position 0.2s var(--cubic-bezier);
+}
+
+.button-reversed {
+    position: relative;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background: 
+        linear-gradient(var(--primary), var(--primary)) padding-box,
+        linear-gradient(90deg, var(--light2), var(--light1)) border-box;
+    color: var(--font-color);
+    font-weight: bold;
+    cursor: pointer;
+    background-size: 200% 200%;
+    background-position: left;
+    transition: 
+        background-position 0.4s var(--cubic-bezier);
+}
+
+.button-reversed:hover {
+    background-position: right;
+}
+
+.button:hover {
+    background-position: right;
+}
+
+.sparkle {
+    background: linear-gradient(90deg, var(--font-color), var(--font-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    display: inline-block;
+}

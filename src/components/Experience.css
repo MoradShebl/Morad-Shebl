@@ -1,0 +1,142 @@
+.experience-section {
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--primary);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--light1), var(--light2));
+}
+
+.timeline-item {
+  position: relative;
+  padding: 2rem 0 2rem 3rem;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 2.5rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--light1), var(--light2));
+  box-shadow: 0 0 20px rgba(122, 135, 251, 0.5);
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+}
+
+.time-period {
+  color: var(--light2);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.role-company {
+  margin-bottom: 1rem;
+}
+
+.role-company h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  color: var(--light1);
+}
+
+.description {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.skills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.skill-tag {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.experience-sparkle {
+  background: linear-gradient(90deg, var(--light2), var(--light2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .timeline::before {
+    left: 0;
+    transform: none;
+  }
+
+  .timeline-item {
+    padding-left: 2rem;
+  }
+
+  .timeline-item::before {
+    left: -6px;
+    transform: none;
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+  }
+
+  .timeline-content:hover {
+    transform: translateY(-5px);
+  }
+}
