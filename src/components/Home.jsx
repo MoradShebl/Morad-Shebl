@@ -6,11 +6,41 @@ import gsap from "gsap";
 export const Home = memo(() => {
   const starRefs = useRef([]);
   const contentRef = useRef(null);
-
   const gridRef = useRef(null);
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    // Mouse movement handler for stars and grid
+    const handleMouseMove = (e) => {
+      const { clientX, clientY } = e;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+
+      // Calculate movement based on mouse position relative to center
+      const moveX = (clientX - centerX) / 100;
+      const moveY = (clientY - centerY) / 100;
+
+      // Animate grid with subtle movement
+      gsap.to(gridRef.current, {
+        transform: `translate(-50%, -50%) translate(${moveX * 2}px, ${moveY * 2}px)`,
+        duration: 1,
+        ease: "power2.out",
+      });
+
+      // Animate stars with more pronounced movement
+      starRefs.current.forEach((star, index) => {
+        const direction = index === 0 ? 1 : -1; // Move stars in opposite directions
+        gsap.to(star, {
+          x: moveX * 5 * direction,
+          y: moveY * 5 * direction,
+          duration: 1,
+          ease: "power2.out",
+        });
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
     // Optimize initial load animation
     requestAnimationFrame(() => {
       const tl = gsap.timeline();
@@ -58,6 +88,14 @@ export const Home = memo(() => {
         }
       };
     });
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      if (contentRef.current) {
+        contentRef.current.style.willChange = "auto";
+      }
+    };
   }, []);
 
   return (
