@@ -51,6 +51,20 @@ const CertificationSlides = () => {
     );
   };
 
+  // Add keyboard navigation
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowLeft') {
+      prevSlide();
+    } else if (e.key === 'ArrowRight') {
+      nextSlide();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Set initial states
@@ -108,25 +122,41 @@ const CertificationSlides = () => {
       className="certifications-section"
       ref={sectionRef}
       id="certifications"
+      role="region"
+      aria-label="Certifications carousel"
     >
-      <h2 className="section-title">
+      <h2 className="section-title" tabIndex="0">
         My <span className="accent">Certifications</span>
-        <span className="sparkle">✨</span>
+        <span className="sparkle" aria-hidden="true">✨</span>
       </h2>
 
-      <div className="slider-container">
+      <div 
+        className="slider-container"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Certification slides"
+      >
         <div className="slides-wrapper">
           {certifications.map((cert, index) => (
             <div
               key={cert.id}
               className="slide"
               ref={(el) => (slideRefs.current[index] = el)}
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`${index + 1} of ${certifications.length}`}
+              tabIndex={currentSlide === index ? 0 : -1}
             >
               <div className="cert-card">
-                {cert.image && <img src={getImageSource(cert.image)} alt={cert.title} />}
+                {cert.image && (
+                  <img 
+                    src={getImageSource(cert.image)} 
+                    alt={`${cert.title} certificate from ${cert.issuer}`} 
+                  />
+                )}
                 <div className="cert-info">
-                  <h3>{cert.title}</h3>
-                  <p>
+                  <h3 tabIndex="0">{cert.title}</h3>
+                  <p tabIndex="0">
                     {cert.issuer} • {cert.date}
                   </p>
                   {cert.link && (
@@ -135,6 +165,7 @@ const CertificationSlides = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="button-reversed"
+                      aria-label={`View credential for ${cert.title}`}
                     >
                       Show Credential
                     </a>
@@ -145,19 +176,33 @@ const CertificationSlides = () => {
           ))}
         </div>
 
-        <button className="nav-button prev" onClick={prevSlide}>
-          ←
+        <button 
+          className="nav-button prev" 
+          onClick={prevSlide}
+          aria-label="Previous slide"
+          onKeyDown={handleKeyDown}
+        >
+          <span aria-hidden="true">←</span>
         </button>
-        <button className="nav-button next" onClick={nextSlide}>
-          →
+        <button 
+          className="nav-button next" 
+          onClick={nextSlide}
+          aria-label="Next slide"
+          onKeyDown={handleKeyDown}
+        >
+          <span aria-hidden="true">→</span>
         </button>
 
-        <div className="dots">
+        <div className="dots" role="tablist" aria-label="Slide dots">
           {certifications.map((_, index) => (
             <button
               key={index}
               className={`dot ${index === currentSlide ? "active" : ""}`}
               onClick={() => setCurrentSlide(index)}
+              role="tab"
+              aria-selected={index === currentSlide}
+              aria-label={`Go to slide ${index + 1}`}
+              tabIndex={index === currentSlide ? 0 : -1}
             />
           ))}
         </div>

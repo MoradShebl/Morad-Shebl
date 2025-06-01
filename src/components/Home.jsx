@@ -87,26 +87,47 @@ export const Home = () => {
   }, []);
 
   return (
-    <section id="home" ref={sectionRef}>
-      <div className="grid-section" ref={gridRef}></div>
+    <section
+      id="home"
+      ref={sectionRef}
+      role="region"
+      aria-label="Home section"
+    >
+      <div
+        className="grid-section"
+        ref={gridRef}
+        aria-hidden="true"
+      ></div>
 
       <div
         className="glow-star left"
         ref={(el) => (starRefs.current[0] = el)}
+        aria-hidden="true"
       />
       <div
         className="glow-star right"
         ref={(el) => (starRefs.current[1] = el)}
+        aria-hidden="true"
       />
 
-      <div className="hero-content" ref={contentRef}>
-        <h1>I design and build clean websites</h1>
-        <p>I craft smooth digital experiences that work across all devices.</p>
+      <div
+        className="hero-content"
+        ref={contentRef}
+        role="main"
+      >
+        <h1 tabIndex="0">I design and build clean websites</h1>
+        <p tabIndex="0">I craft smooth digital experiences that work across all devices.</p>
         <button
           className="hire-me button"
           onClick={() =>
             window.open("https://www.linkedin.com/in/morad-shebl/", "_blank")
           }
+          aria-label="Visit my LinkedIn profile to hire me"
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              window.open("https://www.linkedin.com/in/morad-shebl/", "_blank");
+            }
+          }}
         >
           Hire me
         </button>

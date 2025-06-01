@@ -72,26 +72,57 @@ const Experience = () => {
   }, []);
 
   return (
-    <section className="experience-section" ref={sectionRef} id="experience">
+    <section 
+      className="experience-section" 
+      ref={sectionRef} 
+      id="experience"
+      role="region"
+      aria-label="Work experience timeline"
+    >
       <div className="container">
-        <h2 className="section-title">
+        <h2 className="section-title" tabIndex="0">
           Experience <span className="accent">Journey</span>
-          <span className="sparkle experience-sparkle">✨</span>
+          <span className="sparkle experience-sparkle" aria-hidden="true">✨</span>
         </h2>
         
-        <div className="timeline" ref={timelineRef}>
+        <div 
+          className="timeline" 
+          ref={timelineRef}
+          role="list"
+          aria-label="Experience timeline"
+        >
           {experienceData.experiences.map((exp, index) => (
-            <div className="timeline-item" key={exp.id}>
-              <div className="timeline-content">
-                <div className="time-period">{exp.period}</div>
+            <div 
+              className="timeline-item" 
+              key={exp.id}
+              role="listitem"
+              tabIndex="0"
+              aria-label={`${exp.role} at ${exp.company}`}
+            >
+              <div 
+                className="timeline-content"
+                role="article"
+              >
+                <div className="time-period" tabIndex="0">{exp.period}</div>
                 <div className="role-company">
-                  <h3>{exp.role}</h3>
-                  <span className="company">{exp.company}</span>
+                  <h3 tabIndex="0">{exp.role}</h3>
+                  <span className="company" tabIndex="0">{exp.company}</span>
                 </div>
-                <p className="description">{exp.description}</p>
-                <div className="skills">
+                <p className="description" tabIndex="0">{exp.description}</p>
+                <div 
+                  className="skills"
+                  role="list"
+                  aria-label="Skills used"
+                >
                   {exp.skills.map((skill, idx) => (
-                    <span key={idx} className="skill-tag">{skill}</span>
+                    <span 
+                      key={idx} 
+                      className="skill-tag"
+                      role="listitem"
+                      tabIndex="0"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </div>

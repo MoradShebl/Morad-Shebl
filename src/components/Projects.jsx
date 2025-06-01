@@ -114,6 +114,22 @@ const Projects = () => {
     );
   };
 
+  // Add keyboard handler for modal
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      // Focus trap for modal
+      modalContentRef.current?.focus();
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isModalOpen]);
+
   useEffect(() => {
     projectsRef.current = [];
 
@@ -202,28 +218,50 @@ const Projects = () => {
   };
 
   return (
-    <section className="projects-section" ref={sectionRef} id="projects">
+    <section
+      className="projects-section"
+      ref={sectionRef}
+      id="projects"
+      role="region"
+      aria-label="Projects section"
+    >
       <div className="projects-container">
-        <h2 className="projects-title">
+        <h2 className="projects-title" tabIndex="0">
           Featured <span className="accent">Projects</span>
-          <span className="sparkle projects-sparkle">✨</span>
+          <span className="sparkle projects-sparkle" aria-hidden="true">
+            ✨
+          </span>
         </h2>
 
-        <div className="projects-grid">
+        <div
+          className="projects-grid"
+          role="list"
+          aria-label="Projects list"
+        >
           {projects.map((project) => (
             <div
               key={project.id}
               className="project-card"
               ref={(el) => (projectsRef.current[project.id - 1] = el)}
+              role="listitem"
+              tabIndex="0"
             >
               <div className="project-image">
-                <img src={getImageSource(project.image)} alt={project.title} />
-                <div className="project-overlay">
-                  <div className="tech-stack">
+                <img
+                  src={getImageSource(project.image)}
+                  alt={`${project.title} project preview`}
+                />
+                <div className="project-overlay" aria-hidden="true">
+                  <div
+                    className="tech-stack"
+                    role="list"
+                    aria-label="Technologies used"
+                  >
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={`${project.title}-${tech}-${techIndex}`}
                         className="tech-tag"
+                        role="listitem"
                       >
                         {tech}
                       </span>
@@ -231,11 +269,12 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <h3 tabIndex="0">{project.title}</h3>
+              <p tabIndex="0">{project.description}</p>
               <button
                 className="button-reversed"
                 onClick={() => handleLearnMore(project)}
+                aria-label={`Learn more about ${project.title}`}
               >
                 Learn More
               </button>
@@ -248,23 +287,33 @@ const Projects = () => {
             className="project-modal-overlay"
             ref={modalRef}
             onClick={closeModal}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={`modal-title-${selectedProject.id}`}
           >
             <div
               className="project-modal"
               ref={modalContentRef}
               onClick={(e) => e.stopPropagation()}
+              tabIndex="-1"
             >
-              <button className="close-modal" onClick={closeModal}>
+              <button
+                className="close-modal"
+                onClick={closeModal}
+                aria-label="Close modal"
+              >
                 &times;
               </button>
 
               <div className="modal-header">
                 <img
                   src={getImageSource(selectedProject.image)}
-                  alt={selectedProject.title}
+                  alt={`${selectedProject.title} project preview`}
                   className="main-image"
                 />
-                <h2>{selectedProject.title}</h2>
+                <h2 id={`modal-title-${selectedProject.id}`} tabIndex="0">
+                  {selectedProject.title}
+                </h2>
               </div>
 
               <div className="modal-content">
@@ -321,6 +370,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="demo-link"
+                      aria-label={`View live demo of ${selectedProject.title}`}
                     >
                       Live Demo
                     </a>
@@ -331,6 +381,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="github-link"
+                      aria-label={`View GitHub repository of ${selectedProject.title}`}
                     >
                       GitHub Repository
                     </a>

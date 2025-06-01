@@ -78,46 +78,95 @@ const About = () => {
   }, []);
 
   return (
-    <section className="about" id="about" ref={sectionRef}>
+    <section
+      className="about"
+      id="about"
+      ref={sectionRef}
+      role="region"
+      aria-label="About section"
+    >
       <div className="about-container">
         <div className="about-header" ref={headerRef}>
-          <h2>About Me</h2>
-          <p className="subtitle">Creative Developer & Designer</p>
+          <h2 tabIndex="0">About Me</h2>
+          <p className="subtitle" tabIndex="0">
+            Creative Developer & Designer
+          </p>
         </div>
 
         <div className="about-content">
-          <div className="profile-card" ref={profileRef}>
+          <div
+            className="profile-card"
+            ref={profileRef}
+            role="article"
+            aria-label="Profile information"
+          >
             <div className="profile-image">
-              <img src={portrait} alt="Profile" />
+              <img
+                src={portrait}
+                alt="Morad Shebl - Frontend Developer Portrait"
+              />
             </div>
             <div className="profile-info">
-              <h3>Morad Shebl</h3>
-              <p className="role">Frontend Developer</p>
-              <div className="stats">
-                <div className="stat">
-                  <span className="number">1+</span>
+              <h3 tabIndex="0">Morad Shebl</h3>
+              <p className="role" tabIndex="0">
+                Frontend Developer
+              </p>
+              <div
+                className="stats"
+                role="list"
+                aria-label="Experience statistics"
+              >
+                <div className="stat" role="listitem">
+                  <span
+                    className="number"
+                    aria-label="Years of experience"
+                  >
+                    1+
+                  </span>
                   <span className="label">Years Experience</span>
                 </div>
-                <div className="stat">
-                  <span className="number">10+</span>
+                <div className="stat" role="listitem">
+                  <span
+                    className="number"
+                    aria-label="Number of completed projects"
+                  >
+                    10+
+                  </span>
                   <span className="label">Projects Done</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="about-description" ref={descriptionRef}>
-            <p>
+          <div
+            className="about-description"
+            ref={descriptionRef}
+            role="contentinfo"
+          >
+            <p tabIndex="0">
               I'm a passionate frontend developer with a keen eye for design. I
               transform creative ideas into seamless, interactive experiences
               using modern web technologies.
             </p>
 
-            <div className="skills">
-              <h4>Tech Stack</h4>
-              <div className="skill-tags">
+            <div
+              className="skills"
+              role="region"
+              aria-label="Technical skills"
+            >
+              <h4 tabIndex="0">Tech Stack</h4>
+              <div
+                className="skill-tags"
+                role="list"
+                aria-label="List of technical skills"
+              >
                 {skills.map((skill) => (
-                  <span className="skill-tag" key={skill}>
+                  <span
+                    className="skill-tag"
+                    key={skill}
+                    role="listitem"
+                    tabIndex="0"
+                  >
                     {skill}
                   </span>
                 ))}
@@ -132,6 +181,15 @@ const About = () => {
                   "_blank"
                 )
               }
+              aria-label="Download my CV"
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
+                  window.open(
+                    "https://drive.google.com/file/d/16W7VM0KSeqxTGeJ9HJCG094fNHLxE1ls/view?usp=sharing",
+                    "_blank"
+                  );
+                }
+              }}
             >
               Download CV
             </button>

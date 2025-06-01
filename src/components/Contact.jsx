@@ -14,11 +14,37 @@ const Contact = () => {
     message: "",
   });
 
+  const [formErrors, setFormErrors] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
   const sectionRef = useRef(null);
   const formRef = useRef(null);
 
+  const validateField = (name, value) => {
+    switch (name) {
+      case 'email':
+        return !value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) 
+          ? 'Please enter a valid email address' 
+          : '';
+      case 'name':
+        return value.length < 2 ? 'Name must be at least 2 characters' : '';
+      case 'message':
+        return value.length < 10 ? 'Message must be at least 10 characters' : '';
+      default:
+        return '';
+    }
+  };
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    setFormErrors({
+      ...formErrors,
+      [name]: validateField(name, value)
+    });
   };
 
   const handleSubmit = (e) => {
@@ -68,68 +94,130 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className="contact-section" ref={sectionRef} id="contact">
+    <section 
+      className="contact-section" 
+      ref={sectionRef} 
+      id="contact"
+      role="region"
+      aria-label="Contact form section"
+    >
       <div className="contact-container">
-        <h2 className="contact-title">
+        <h2 className="contact-title" tabIndex="0">
           Get in <span className="accent">Touch</span>
-          <span className="sparkle contact-sparkle">✨</span>
+          <span className="sparkle contact-sparkle" aria-hidden="true">✨</span>
         </h2>
 
         <div className="contact-content">
           <div className="contact-card">
-            <form ref={formRef} onSubmit={handleSubmit}>
+            <form 
+              ref={formRef} 
+              onSubmit={handleSubmit}
+              role="form"
+              aria-label="Contact form"
+            >
               <div className="form-group">
+                <label htmlFor="name" className="visually-hidden">Your Name</label>
                 <input
+                  id="name"
                   type="text"
                   name="name"
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  aria-required="true"
+                  aria-invalid={!!formErrors.name}
+                  aria-describedby="name-error"
                 />
+                {formErrors.name && (
+                  <span id="name-error" className="error-message" role="alert">
+                    {formErrors.name}
+                  </span>
+                )}
               </div>
               <div className="form-group">
+                <label htmlFor="email" className="visually-hidden">Your Email</label>
                 <input
+                  id="email"
                   type="email"
                   name="email"
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  aria-required="true"
+                  aria-invalid={!!formErrors.email}
+                  aria-describedby="email-error"
                 />
+                {formErrors.email && (
+                  <span id="email-error" className="error-message" role="alert">
+                    {formErrors.email}
+                  </span>
+                )}
               </div>
               <div className="form-group">
+                <label htmlFor="message" className="visually-hidden">Your Message</label>
                 <textarea
+                  id="message"
                   name="message"
                   placeholder="Your Message"
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  aria-required="true"
+                  aria-invalid={!!formErrors.message}
+                  aria-describedby="message-error"
                 />
+                {formErrors.message && (
+                  <span id="message-error" className="error-message" role="alert">
+                    {formErrors.message}
+                  </span>
+                )}
               </div>
-              <button type="submit" className="button-reversed" onClick={handleSubmit}>
+              <button 
+                type="submit" 
+                className="button-reversed"
+                aria-label="Send message"
+              >
                 Send Message
               </button>
             </form>
           </div>
 
-          <div className="contact-info-container">
-            <div className="contact-info">
-              <div className="info-icon"><FontAwesomeIcon icon={ faEnvelope } /></div>
+          <div 
+            className="contact-info-container"
+            role="complementary"
+            aria-label="Contact information"
+          >
+            <div className="contact-info" tabIndex="0">
+              <div className="info-icon" aria-hidden="true">
+                <FontAwesomeIcon icon={faEnvelope} />
+              </div>
               <div className="info-content">
                 <h3>Email</h3>
-                <p>moradsheblpaik@gmail.com</p>
+                <p>
+                  <a 
+                    href="mailto:moradsheblpaik@gmail.com"
+                    aria-label="Send email to moradsheblpaik@gmail.com"
+                  >
+                    moradsheblpaik@gmail.com
+                  </a>
+                </p>
               </div>
             </div>
-            <div className="contact-info">
-              <div className="info-icon"><FontAwesomeIcon icon={ faPhone } /></div>
+            <div className="contact-info" tabIndex="0">
+              <div className="info-icon" aria-hidden="true">
+                <FontAwesomeIcon icon={faPhone} />
+              </div>
               <div className="info-content">
                 <h3>Phone</h3>
                 <p>+20 1282 9899 89</p>
               </div>
             </div>
-            <div className="contact-info">
-              <div className="info-icon"><FontAwesomeIcon icon={ faLocationPin } /></div>
+            <div className="contact-info" tabIndex="0">
+              <div className="info-icon" aria-hidden="true">
+                <FontAwesomeIcon icon={faLocationPin} />
+              </div>
               <div className="info-content">
                 <h3>Location</h3>
                 <p>Alex, Egypt</p>
