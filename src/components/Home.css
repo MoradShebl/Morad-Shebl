@@ -67,6 +67,7 @@
     margin-bottom: 18px;
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.01em;
+    font-display: swap
 }
 
 .hero-content p {
