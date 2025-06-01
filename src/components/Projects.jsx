@@ -4,6 +4,42 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import projectsData from "../data/projects.json";
 
+// Import project images
+import newPortofolio from "../assets/NewPortofolio.png";
+import remembrall from "../assets/Remembrall.png";
+import carFare from "../assets/CarFare.png";
+import expensesTracker from "../assets/ExpensesTracker.jpg";
+import sheblMohamed from "../assets/SheblMohamed.png";
+import portofolioWebsite from "../assets/PortofolioWebste.png";
+import faceBlur from "../assets/FaceBlur.png";
+import talk2View from "../assets/Talk2View.png";
+
+// Import screenshots
+import newPortofolioScreen1 from "../assets/NewPortofolioWebsiteScreen1.png";
+import newPortofolioScreen2 from "../assets/NewPortofolioWebsiteScreen2.png";
+import newPortofolioScreen3 from "../assets/NewPortofolioWebsiteScreen3.png";
+import remembrallScreen1 from "../assets/RemembrallScreen1.png";
+import remembrallScreen2 from "../assets/RemembrallScreen2.png";
+import remembrallScreen3 from "../assets/RemembrallScreen3.png";
+
+// Map for image imports
+const imageMap = {
+  "src/assets/NewPortofolio.png": newPortofolio,
+  "src/assets/Remembrall.png": remembrall,
+  "src/assets/CarFare.png": carFare,
+  "src/assets/ExpensesTracker.jpg": expensesTracker,
+  "src/assets/SheblMohamed.png": sheblMohamed,
+  "src/assets/PortofolioWebste.png": portofolioWebsite,
+  "src/assets/FaceBlur.png": faceBlur,
+  "src/assets/Talk2View.png": talk2View,
+  "src/assets/NewPortofolioWebsiteScreen1.png": newPortofolioScreen1,
+  "src/assets/NewPortofolioWebsiteScreen2.png": newPortofolioScreen2,
+  "src/assets/NewPortofolioWebsiteScreen3.png": newPortofolioScreen3,
+  "src/assets/RemembrallScreen1.png": remembrallScreen1,
+  "src/assets/RemembrallScreen2.png": remembrallScreen2,
+  "src/assets/RemembrallScreen3.png": remembrallScreen3,
+};
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
@@ -160,6 +196,11 @@ const Projects = () => {
     return () => ctx.revert();
   }, []);
 
+  // Helper function to get the correct image source
+  const getImageSource = (imagePath) => {
+    return imageMap[imagePath] || imagePath;
+  };
+
   return (
     <section className="projects-section" ref={sectionRef} id="projects">
       <div className="projects-container">
@@ -176,7 +217,7 @@ const Projects = () => {
               ref={(el) => (projectsRef.current[project.id - 1] = el)}
             >
               <div className="project-image">
-                <img src={project.image} alt={project.title} />
+                <img src={getImageSource(project.image)} alt={project.title} />
                 <div className="project-overlay">
                   <div className="tech-stack">
                     {project.tech.map((tech, techIndex) => (
@@ -219,7 +260,7 @@ const Projects = () => {
 
               <div className="modal-header">
                 <img
-                  src={selectedProject.image}
+                  src={getImageSource(selectedProject.image)}
                   alt={selectedProject.title}
                   className="main-image"
                 />
@@ -260,17 +301,15 @@ const Projects = () => {
                   <div className="screenshots-section">
                     <h3>Screenshots</h3>
                     <div className="screenshots-grid">
-                      {selectedProject.details.screenshots.map(
-                        (screenshot, index) => (
-                          <img
-                            key={index}
-                            src={screenshot}
-                            alt={`${selectedProject.title} screenshot ${
-                              index + 1
-                            }`}
-                          />
-                        )
-                      )}
+                      {selectedProject.details.screenshots.map((screenshot, index) => (
+                        <img
+                          key={index}
+                          src={getImageSource(screenshot)}
+                          alt={`${selectedProject.title} screenshot ${
+                            index + 1
+                          }`}
+                        />
+                      ))}
                     </div>
                   </div>
                 )}

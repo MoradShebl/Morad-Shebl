@@ -30,8 +30,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    height: 89%;
+    width: 69%;
+    height: 77%;
     background-image:
         linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 0px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);

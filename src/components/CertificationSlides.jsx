@@ -4,6 +4,35 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import certData from "../data/certifications.json";
 
+// Import certification images
+import virtualPresentation from "../assets/Preparing a Great Virtual Presentation Course.png";
+import deciLevel1 from "../assets/Morad Shebl Mohamed Eldeeb.png";
+import numpy from "../assets/numpy.png";
+import pythonBasics from "../assets/Course_Certificate_En.png";
+import deciBootcamp from "../assets/Attending the DECI-IBM Bootcamp.jpg";
+import deciSummer from "../assets/Summer camp of DECI.png";
+import htmlCss from "../assets/Course_Certificate_En-1.png";
+import digitalMarketing from "../assets/Certificate.png";
+import programmingBasics from "../assets/أساسيات البرمجة بلغة جافا سكريبت و بايثون.jpg";
+
+// Map for image imports
+const imageMap = {
+  "src/assets/Preparing a Great Virtual Presentation Course.png": virtualPresentation,
+  "src/assets/Morad Shebl Mohamed Eldeeb.png": deciLevel1,
+  "src/assets/numpy.png": numpy,
+  "src/assets/Course_Certificate_En.png": pythonBasics,
+  "src/assets/Attending the DECI-IBM Bootcamp.jpg": deciBootcamp,
+  "src/assets/Summer camp of DECI.png": deciSummer,
+  "src/assets/Course_Certificate_En-1.png": htmlCss,
+  "src/assets/Certificate.png": digitalMarketing,
+  "src/assets/أساسيات البرمجة بلغة جافا سكريبت و بايثون.jpg": programmingBasics
+};
+
+// Helper function to get the correct image source
+const getImageSource = (imagePath) => {
+  return imageMap[imagePath] || imagePath;
+};
+
 gsap.registerPlugin(ScrollTrigger);
 
 const CertificationSlides = () => {
@@ -94,7 +123,7 @@ const CertificationSlides = () => {
               ref={(el) => (slideRefs.current[index] = el)}
             >
               <div className="cert-card">
-                {cert.image && <img src={cert.image} alt={cert.title} />}
+                {cert.image && <img src={getImageSource(cert.image)} alt={cert.title} />}
                 <div className="cert-info">
                   <h3>{cert.title}</h3>
                   <p>

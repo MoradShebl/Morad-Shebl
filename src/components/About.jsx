@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import techsData from "../data/techs.json";
+import portrait from "../assets/portrait.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -87,7 +88,7 @@ const About = () => {
         <div className="about-content">
           <div className="profile-card" ref={profileRef}>
             <div className="profile-image">
-              <img src="src\assets\portrait.png" alt="Profile" />
+              <img src={portrait} alt="Profile" />
             </div>
             <div className="profile-info">
               <h3>Morad Shebl</h3>

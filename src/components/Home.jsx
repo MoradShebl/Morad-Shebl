@@ -66,6 +66,11 @@ export const Home = () => {
           y: y * 5,
           duration: 1,
           ease: "power2.out",
+          onUpdate: () => {
+            if (gridRef.current) {
+              gridRef.current.style.transform = `translate(-50%, -50%) translate(${gsap.getProperty(gridRef.current, "x") || 0}px, ${gsap.getProperty(gridRef.current, "y") || 0}px)`;
+            }
+          },
         });
 
         gsap.to(contentRef.current, {
