@@ -177,7 +177,7 @@ const About = () => {
               className="button-reversed"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/16W7VM0KSeqxTGeJ9HJCG094fNHLxE1ls/view?usp=sharing",
+                  "https://drive.google.com/file/d/15xx-2bZsBfQtn8hvBvy6zHe98Qn6D_cs/view?usp=drive_link",
                   "_blank"
                 )
               }
@@ -185,7 +185,7 @@ const About = () => {
               onKeyPress={(e) => {
                 if (e.key === "Enter") {
                   window.open(
-                    "https://drive.google.com/file/d/16W7VM0KSeqxTGeJ9HJCG094fNHLxE1ls/view?usp=sharing",
+                    "https://drive.google.com/file/d/15xx-2bZsBfQtn8hvBvy6zHe98Qn6D_cs/view?usp=drive_link",
                     "_blank"
                   );
                 }
