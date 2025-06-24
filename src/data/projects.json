@@ -5,18 +5,14 @@
       "title": "E-Commerce Website",
       "description": "end-to-end e-commerce website",
       "tech": ["React", "Gsap", "CSS", "TypeScript", "Expressjs", "Mongodb"],
-      "image": "src/assets/e-commerceScreenShot1.png",
+      "image": "https://media.licdn.com/dms/image/v2/D4E22AQHoQekLeZyuGg/feedshare-shrink_2048_1536/B4EZehIfa_G4Aw-/0/1750755123265?e=1753920000&v=beta&t=6msHNsUtawedMi_l3tPbDo5I65WkVt-Z12_GqRnUzgo",
       "details": {
         "fullDescription": "end-to-end e-commerce website—from Figma design to a fully functional web app!",
-        "features": [
-          "Backend",
-          "Database Integration",
-          "Responsive design"
-        ],
+        "features": ["Backend", "Database Integration", "Responsive design"],
         "screenshots": [
-          "src/assets/e-commerceScreenShot1.png",
-          "src/assets/e-commerceScreenShot2.png",
-          "src/assets/e-commerceScreenShot3.png"
+          "https://media.licdn.com/dms/image/v2/D4E22AQHoQekLeZyuGg/feedshare-shrink_2048_1536/B4EZehIfa_G4Aw-/0/1750755123265?e=1753920000&v=beta&t=6msHNsUtawedMi_l3tPbDo5I65WkVt-Z12_GqRnUzgo",
+          "https://media.licdn.com/dms/image/v2/D4E22AQFIZrj5GY_zzQ/feedshare-shrink_1280/B4EZehIfbyHIAk-/0/1750755098520?e=1753920000&v=beta&t=0_wQt6TGFjMaMdm4IYWZAVdvnfHf4DzEfxeAaNGjDic",
+          "https://media.licdn.com/dms/image/v2/D4E22AQFcjPC-1e6wBA/feedshare-shrink_2048_1536/B4EZehIfasHYAo-/0/1750755079735?e=1753920000&v=beta&t=vTidszxIFVUYrpNh69q365QozA_1mWggAjR4G-bBETA"
         ],
         "github": "https://github.com/MoradShebl/e-commerce"
       }
@@ -51,11 +47,7 @@
       "image": "src/assets/Remembrall.png",
       "details": {
         "fullDescription": "A magical-themed reminder app designed to help users stay on top of their tasks and habits. Inspired by the wizarding world, it offers a sleek and intuitive interface that makes organization feel effortless and engaging.",
-        "features": [
-          "Daily Reminders",
-          "Themed UI",
-          "Progress Tracking"
-        ],
+        "features": ["Daily Reminders", "Themed UI", "Progress Tracking"],
         "screenshots": [
           "src/assets/RemembrallScreen1.png",
           "src/assets/RemembrallScreen2.png",
@@ -90,11 +82,7 @@
       "image": "src/assets/ExpensesTracker.jpg",
       "details": {
         "fullDescription": "It’s simple, clean, and functional tracks incomes & expenses in real-time. It provides a user-friendly interface for managing finances, allowing users to easily add, edit, and delete transactions.",
-        "features": [
-          "User friendly",
-          "easy to use",
-          "Responsive design"
-        ],
+        "features": ["User friendly", "easy to use", "Responsive design"],
         "liveDemo": "https://expenses-tracker-delta-lake.vercel.app/",
         "github": "https://github.com/MoradShebl/expenses-tracker"
       }
@@ -157,11 +145,7 @@
       "image": "src/assets/Talk2View.png",
       "details": {
         "fullDescription": "an innovative app that converts spoken language into sign language, making communication more accessible for individuals with disabilities.",
-        "features": [
-          "Easy UI",
-          "Available for phones",
-          "Real time"
-        ],
+        "features": ["Easy UI", "Available for phones", "Real time"],
         "github": "https://github.com/MoradShebl/Shebl-Mohamed"
       }
     }
