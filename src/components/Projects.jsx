@@ -47,6 +47,7 @@ const Projects = () => {
   const projectsRef = useRef([]);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [projectsSlice, setprojectsSlice] = useState(3);
   const modalRef = useRef(null);
   const modalContentRef = useRef(null);
 
@@ -100,18 +101,15 @@ const Projects = () => {
       scale: 0.95,
       duration: 0.3,
       ease: "power3.in",
-    }).to(
-      modalRef.current,
-      {
-        opacity: 0,
-        duration: 0.2,
-        onComplete: () => {
-          setIsModalOpen(false);
-          setSelectedProject(null);
-          document.body.style.overflow = "unset";
-        },
-      }
-    );
+    }).to(modalRef.current, {
+      opacity: 0,
+      duration: 0.2,
+      onComplete: () => {
+        setIsModalOpen(false);
+        setSelectedProject(null);
+        document.body.style.overflow = "unset";
+      },
+    });
   };
 
   // Add keyboard handler for modal
@@ -233,12 +231,8 @@ const Projects = () => {
           </span>
         </h2>
 
-        <div
-          className="projects-grid"
-          role="list"
-          aria-label="Projects list"
-        >
-          {projects.map((project) => (
+        <div className="projects-grid" role="list" aria-label="Projects list">
+          {projects.slice(0, projectsSlice).map((project) => (
             <div
               key={project.id}
               className="project-card"
@@ -350,15 +344,17 @@ const Projects = () => {
                   <div className="screenshots-section">
                     <h3>Screenshots</h3>
                     <div className="screenshots-grid">
-                      {selectedProject.details.screenshots.map((screenshot, index) => (
-                        <img
-                          key={index}
-                          src={getImageSource(screenshot)}
-                          alt={`${selectedProject.title} screenshot ${
-                            index + 1
-                          }`}
-                        />
-                      ))}
+                      {selectedProject.details.screenshots.map(
+                        (screenshot, index) => (
+                          <img
+                            key={index}
+                            src={getImageSource(screenshot)}
+                            alt={`${selectedProject.title} screenshot ${
+                              index + 1
+                            }`}
+                          />
+                        )
+                      )}
                     </div>
                   </div>
                 )}
@@ -392,6 +388,14 @@ const Projects = () => {
           </div>
         )}
       </div>
+      {projectsSlice < projects.length && (
+        <button
+          className="button-reversed show-more"
+          onClick={() => setprojectsSlice(projectsSlice + 3)}
+        >
+          Show more
+        </button>
+      )}
     </section>
   );
 };
