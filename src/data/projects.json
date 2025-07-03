@@ -2,6 +2,21 @@
   "projects": [
     {
       "id": 1,
+      "title": "مُحَاذٍ",
+      "description": "Google extension that aligns arabic correctly",
+      "tech": ["HTML", "CSS", "JS"],
+      "image": "https://media.licdn.com/dms/image/v2/D4E22AQHpf8NhftIVtQ/feedshare-shrink_800/B4EZfPTevLHwAk-/0/1751529681619?e=1754524800&v=beta&t=QiWgvonzLJB6N9oXOYJBrhZ4eTXopBzE-wdQUX92W7M",
+      "details": {
+        "fullDescription": "end-to-end e-commerce website—from Figma design to a fully functional web app!",
+        "features": ["Backend", "Database Integration", "Responsive design"],
+        "screenshots": [
+          "https://media.licdn.com/dms/image/v2/D4E22AQHpf8NhftIVtQ/feedshare-shrink_800/B4EZfPTevLHwAk-/0/1751529681619?e=1754524800&v=beta&t=QiWgvonzLJB6N9oXOYJBrhZ4eTXopBzE-wdQUX92W7M"
+        ],
+        "github": "https://github.com/MoradShebl/muhathin"
+      }
+    },
+    {
+      "id": 2,
       "title": "E-Commerce Website",
       "description": "end-to-end e-commerce website",
       "tech": ["React", "Gsap", "CSS", "TypeScript", "Expressjs", "Mongodb"],
@@ -18,7 +33,7 @@
       }
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Portofolio Website",
       "description": "My new modern portofolio website Reflects My Journey",
       "tech": ["React", "Gsap", "CSS"],
@@ -40,7 +55,7 @@
       }
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Remembrall",
       "description": "App organize your items times to-dos and habits",
       "tech": ["React", "CSS"],
@@ -58,7 +73,7 @@
       }
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Car Fare Calculator",
       "description": "app that calculating the fare of a car ride",
       "tech": ["React", "CSS"],
@@ -75,7 +90,7 @@
       }
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Expenses Tracker",
       "description": "Simple, clean, and functional tracks incomes & expenses",
       "tech": ["React", "CSS"],
@@ -88,7 +103,7 @@
       }
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Shebl Mohamed Website",
       "description": "My Second Website That I made for my Dad",
       "tech": ["HTML", "CSS", "JS"],
@@ -105,7 +120,7 @@
       }
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Portofolio Website",
       "description": "My first portfolio Website That Reflects My Journey",
       "tech": ["HTML", "CSS", "JS"],
@@ -122,7 +137,7 @@
       }
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "Face Blur",
       "description": "A Program that blurs faces from Images, Videos, and WebCams.",
       "tech": ["Python", "OpenCV"],
@@ -138,7 +153,7 @@
       }
     },
     {
-      "id": 9,
+      "id": 10,
       "title": "Talk2View",
       "description": "A talk-to-sign-language app.",
       "tech": ["Python", "Kivy", "OpenCV"],
