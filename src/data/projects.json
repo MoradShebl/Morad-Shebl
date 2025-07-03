@@ -2,13 +2,13 @@
   "projects": [
     {
       "id": 1,
-      "title": "مُحَاذٍ",
+      "title": "Muhathin",
       "description": "Google extension that aligns arabic correctly",
       "tech": ["HTML", "CSS", "JS"],
       "image": "https://media.licdn.com/dms/image/v2/D4E22AQHpf8NhftIVtQ/feedshare-shrink_800/B4EZfPTevLHwAk-/0/1751529681619?e=1754524800&v=beta&t=QiWgvonzLJB6N9oXOYJBrhZ4eTXopBzE-wdQUX92W7M",
       "details": {
-        "fullDescription": "end-to-end e-commerce website—from Figma design to a fully functional web app!",
-        "features": ["Backend", "Database Integration", "Responsive design"],
+        "fullDescription": "Google extension that aligns arabic correctly",
+        "features": ["Easy UI", "easy to use", "Fast & Efficient Processing"],
         "screenshots": [
           "https://media.licdn.com/dms/image/v2/D4E22AQHpf8NhftIVtQ/feedshare-shrink_800/B4EZfPTevLHwAk-/0/1751529681619?e=1754524800&v=beta&t=QiWgvonzLJB6N9oXOYJBrhZ4eTXopBzE-wdQUX92W7M"
         ],
