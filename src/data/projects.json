@@ -2,6 +2,23 @@
   "projects": [
     {
       "id": 1,
+      "title": "Critic3d",
+      "description": "A game-changing tool designed to bring your architectural visions to life!",
+      "tech": ["React", "Threejs", "CSS", "Gsap"],
+      "image": "https://media.licdn.com/dms/image/v2/D4E22AQEe__8ZZxPE9Q/feedshare-shrink_1280/B4EZfoy.I0HwAk-/0/1751957379543?e=1755129600&v=beta&t=c_THZ2Y2SjOhfSoYRlxlmonx2tv_0URxzZcBasj4qlM",
+      "details": {
+        "fullDescription": "Critic empowers architects to create immersive, interactive experiences that bridge the gap between your designs and your clients’ imagination. No more static blueprints—let your work shine with dynamic visualizations!",
+        "features": [
+          "3d import",
+          "Walk mode",
+          "Virtual tour"
+        ],
+        "liveDemo": "https://critic3d.vercel.app/",
+        "github": "https://github.com/MoradShebl/critic/"
+      }
+    },
+    {
+      "id": 2,
       "title": "Muhathin",
       "description": "Google extension that aligns arabic correctly",
       "tech": ["HTML", "CSS", "JS"],
@@ -16,7 +33,7 @@
       }
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "E-Commerce Website",
       "description": "end-to-end e-commerce website",
       "tech": ["React", "Gsap", "CSS", "TypeScript", "Expressjs", "Mongodb"],
@@ -33,7 +50,7 @@
       }
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Portofolio Website",
       "description": "My new modern portofolio website Reflects My Journey",
       "tech": ["React", "Gsap", "CSS"],
@@ -55,7 +72,7 @@
       }
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Remembrall",
       "description": "App organize your items times to-dos and habits",
       "tech": ["React", "CSS"],
@@ -73,7 +90,7 @@
       }
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Car Fare Calculator",
       "description": "app that calculating the fare of a car ride",
       "tech": ["React", "CSS"],
@@ -90,7 +107,7 @@
       }
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Expenses Tracker",
       "description": "Simple, clean, and functional tracks incomes & expenses",
       "tech": ["React", "CSS"],
@@ -103,7 +120,7 @@
       }
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Shebl Mohamed Website",
       "description": "My Second Website That I made for my Dad",
       "tech": ["HTML", "CSS", "JS"],
@@ -120,7 +137,7 @@
       }
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "Portofolio Website",
       "description": "My first portfolio Website That Reflects My Journey",
       "tech": ["HTML", "CSS", "JS"],
@@ -137,7 +154,7 @@
       }
     },
     {
-      "id": 9,
+      "id": 10,
       "title": "Face Blur",
       "description": "A Program that blurs faces from Images, Videos, and WebCams.",
       "tech": ["Python", "OpenCV"],
@@ -153,7 +170,7 @@
       }
     },
     {
-      "id": 10,
+      "id": 11,
       "title": "Talk2View",
       "description": "A talk-to-sign-language app.",
       "tech": ["Python", "Kivy", "OpenCV"],
