@@ -10,6 +10,9 @@
   <title>Morad Shebl - Frontend Developer</title>
   <meta name="title" content="Morad Shebl - Frontend Developer">
   <meta name="description" content="Frontend developer specializing in creating clean, responsive websites using React. View my portfolio of projects and experience.">
+  <meta name="keywords" content="Morad Shebl, frontend developer, React, portfolio, web developer, JavaScript, TypeScript, GSAP, CSS, projects, web design">
+  <meta name="author" content="Morad Shebl">
+  <link rel="canonical" href="https://moradshebl.vercel.app/" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -37,9 +40,53 @@
   <!-- Preload Font -->
   <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Morad Shebl",
+    "url": "https://moradshebl.vercel.app/",
+    "image": "https://moradshebl.vercel.app/og-image.png",
+    "sameAs": [
+      "https://github.com/MoradShebl",
+      "https://www.linkedin.com/in/moradshebl/"
+    ],
+    "jobTitle": "Frontend Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://moradshebl.vercel.app/",
+    "name": "Morad Shebl Portfolio",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://moradshebl.vercel.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <!-- Navigation for sitelinks (SEO and user experience) -->
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://github.com/MoradShebl" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/moradshebl/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </nav>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
